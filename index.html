@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css">
+    <title>porcentage & discount</title>
+  </head>
+  <body>
+    <header class="p-5">
+      <h1 class="text-center text-lg font-bold mb-5">PORCENTAGE & DISCOUNT</h1>
+  </header>
+
+  <section class="p-10 mx-10 shadow-sm bg-slate-50">
+      <h2 class="mb-10">Calcula el precio a pagar de tus productos con descuento:</h2>
+      <form class="text-center flex flex-col gap-5 mx-20">
+          <input class="h-10 pl-2 md:pl-10 bg-slate-200 rounded-xl" id="InputPrice" type="number" placeholder="Escribe el precio de tu producto">
+          <input class="h-10 pl-2 md:pl-10 bg-slate-200 rounded-xl" id="InputDiscount" type="number" placeholder="Escribe el descuento de tu producto"> 
+          <div class="mt-10">
+              <label for="coupons">Codigo del cupon:</label>
+              <select class="p-1 rounded-md bg-slate-200 mt-2" name="coupons" id="coupons">
+                  <option value="0">no tengo</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+              </select>
+          </div>
+      </form>
+      
+      <div class="flex flex-col md:flex-row  mt-20 md:justify-evenly gap-4">
+          <div class="text-center">
+              <button id="btn" class="bg-blue-300 hover:opacity-80 rounded-full p-3 shadow-lg" type="button">
+                  Precio con descuento
+              </button>
+          </div>
+          <div class="flex flex-col text-center md:text-left">
+              <h3 id="displeyPrice"></h3>
+              <h1 class="text-center font-bold" id="displeyDiscount">$0000</h1>
+              <h3 id="displeyValueDiscount"></h3>
+          </div>
+      </div>
+  </section>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
